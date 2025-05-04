@@ -68,19 +68,7 @@ export const concerts = [
         youtube: "https://www.youtube.com/watch?v=qpEwhakrDo4"
       },
       {
-        title: "BWV 998 - Präludium",
-        composer: "J.S.Bach",
-        years: "1685~1750",
-        youtube: "https://www.youtube.com/watch?v=uOuDzjCHeM4"
-      },
-      {
-        title: "BWV 998 - Fuga",
-        composer: "J.S.Bach",
-        years: "1685~1750",
-        youtube: "https://www.youtube.com/watch?v=uOuDzjCHeM4"
-      },
-      {
-        title: "BWV 998 - Allegro",
+        title: "BWV 998 - Präludium,Fuga,Allegro",
         composer: "J.S.Bach",
         years: "1685~1750",
         youtube: "https://www.youtube.com/watch?v=uOuDzjCHeM4"
