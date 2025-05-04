@@ -2,18 +2,15 @@ import Link from 'next/link';
 import { concerts } from '../data/concerts';
 import { Card, CardContent, Typography, Button, Container, Box, Chip } from '@mui/material';
 
-const bgUrl =
-  'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80'; // 클래식 공연 느낌의 무료 이미지
-
 export default function Home() {
   return (
-    <Box sx={{ minHeight: '100vh', background: `linear-gradient(rgba(30,30,60,0.7),rgba(30,30,60,0.7)), url(${bgUrl}) center/cover no-repeat` }}>
+    <Box sx={{ minHeight: '100vh', background: '#a6b36b' }}>
       <Container maxWidth="sm" sx={{ pt: 10, pb: 8 }}>
         <Box textAlign="center" mb={6}>
-          <Typography variant="h2" sx={{ color: 'white', fontWeight: 700, letterSpacing: 2, mb: 1, textShadow: '0 2px 16px #222' }}>
+          <Typography variant="h2" sx={{ color: '#c94b3a', fontWeight: 700, letterSpacing: 2, mb: 1, fontFamily: 'Pretendard, Noto Sans KR, Arial, sans-serif' }}>
             클래식 기타 공연
           </Typography>
-          <Typography variant="h6" sx={{ color: 'white', opacity: 0.85, mb: 2, textShadow: '0 1px 8px #222' }}>
+          <Typography variant="h6" sx={{ color: 'white', opacity: 0.9, mb: 2, fontFamily: 'Pretendard, Noto Sans KR, Arial, sans-serif' }}>
             다가오는 공연을 만나보세요
           </Typography>
         </Box>
@@ -24,32 +21,27 @@ export default function Home() {
               sx={{
                 borderRadius: 4,
                 boxShadow: 6,
-                transition: 'transform 0.2s, box-shadow 0.2s',
-                '&:hover': {
-                  transform: 'translateY(-6px) scale(1.03)',
-                  boxShadow: 12,
-                },
-                background: 'rgba(255,255,255,0.95)',
+                background: 'rgba(255,255,255,0.92)',
+                border: '2px solid #d86c3a',
+                px: 1
               }}
             >
               <CardContent>
-                <Typography variant="h5" fontWeight={600} gutterBottom color="primary.dark" sx={{
-                  lineHeight: 1.2
-                }}>
+                <Typography variant="h5" fontWeight={700} gutterBottom color="primary.dark" sx={{ fontFamily: 'Pretendard, Noto Sans KR, Arial, sans-serif', color: '#c94b3a', mb: 0 }}>
                   {concert.titleMain}
                 </Typography>
-                <Typography variant="subtitle1" color="primary" sx={{ fontWeight: 500, mb: 1, lineHeight: 1.2 }}>
+                <Typography variant="subtitle1" color="secondary" sx={{ fontWeight: 600, mb: 1, lineHeight: 1.2, fontFamily: 'Pretendard, Noto Sans KR, Arial, sans-serif' }}>
                   {concert.titleSub}
                 </Typography>
                 <Box display="flex" alignItems="center" gap={2} mb={1}>
-                  <Chip label={concert.date} color="primary" variant="outlined" size="small" />
-                  <Chip label={concert.bookingInfo} color="secondary" variant="filled" size="small" />
+                  <Chip label={concert.date} color="primary" variant="outlined" size="small" sx={{ fontWeight: 600, fontFamily: 'Pretendard, Noto Sans KR, Arial, sans-serif' }} />
+                  <Chip label={concert.bookingInfo} color="secondary" variant="filled" size="small" sx={{ fontWeight: 600, fontFamily: 'Pretendard, Noto Sans KR, Arial, sans-serif' }} />
                 </Box>
-                <Typography variant="body2" color="text.secondary" gutterBottom sx={{ minHeight: 40 }}>
+                <Typography variant="body2" color="text.secondary" gutterBottom sx={{ minHeight: 40, fontFamily: 'Pretendard, Noto Sans KR, Arial, sans-serif' }}>
                   {concert.invitation.slice(0, 60)}...
                 </Typography>
                 <Link href={`/concerts/${concert.id}`} passHref legacyBehavior>
-                  <Button variant="contained" color="primary" sx={{ mt: 2, borderRadius: 2, px: 4, fontWeight: 600 }}>
+                  <Button variant="contained" color="secondary" sx={{ mt: 2, borderRadius: 2, px: 4, fontWeight: 700, fontFamily: 'Pretendard, Noto Sans KR, Arial, sans-serif' }}>
                     상세 보기
                   </Button>
                 </Link>
