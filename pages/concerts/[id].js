@@ -82,7 +82,7 @@ export default function ConcertDetail() {
             </List>
             <Box sx={{ mt: 4 }}>
               <Link href="/" passHref legacyBehavior>
-                <Button startIcon={<ArrowBackIcon />} variant="text">
+                <Button startIcon={<ArrowBackIcon />} variant="contained" color="primary" sx={{ borderRadius: 2, px: 4, fontWeight: 600 }}>
                   공연 목록으로
                 </Button>
               </Link>
