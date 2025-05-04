@@ -5,13 +5,18 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 const theme = createTheme({
   palette: {
-    primary: { main: '#a6b36b' }, // 올리브 그린
-    secondary: { main: '#d86c3a' }, // 오렌지
-    error: { main: '#c94b3a' }, // 레드
-    background: { default: '#a6b36b' },
+    primary: {
+      main: '#1976d2',
+    },
+    secondary: {
+      main: '#ff4081',
+    },
+    background: {
+      default: '#f4f6fa',
+    },
   },
   typography: {
-    fontFamily: 'Pretendard, Noto Sans KR, Arial, sans-serif',
+    fontFamily: 'Noto Sans KR, Roboto, Arial, sans-serif',
   },
 });
 
