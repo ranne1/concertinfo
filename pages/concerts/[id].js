@@ -19,6 +19,8 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import Link from 'next/link';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 const bgUrl =
   'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80';
@@ -27,6 +29,8 @@ export default function ConcertDetail() {
   const router = useRouter();
   const { id } = router.query;
   const concert = concerts.find(c => c.id === Number(id));
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   if (!concert) return <Container sx={{ mt: 8 }}>공연을 찾을 수 없습니다.</Container>;
 
@@ -73,7 +77,7 @@ export default function ConcertDetail() {
                     underline="none"
                   >
                     <Button variant="outlined" color="error" startIcon={<YouTubeIcon />} sx={{ fontWeight: 600 }}>
-                      유튜브로 듣기
+                      {!isMobile && '유튜브로 듣기'}
                     </Button>
                   </MuiLink>
                 </ListItem>
